@@ -3,14 +3,9 @@ package com.damondeng.spark.wiki
 import java.io.StringReader
 
 import org.apache.lucene.analysis.TokenStream
-import org.apache.lucene.analysis.TokenStream
-import org.apache.lucene.analysis.tokenattributes.CharTermAttribute
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute
 import org.apache.spark.SparkContext
-import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
-import org.apache.spark.rdd.RDD
-import org.wltea.analyzer.lucene.IKAnalyzer
 import org.wltea.analyzer.lucene.IKAnalyzer
 
 import scala.collection.Map
@@ -21,7 +16,7 @@ import scala.collection.mutable.ListBuffer
  * Designed to be loaded into Spark-Shell to analyze wiki_cn data
  */
 
-object WikiOperator{
+class WikiOperator{
 
 
   def isAsciiLetter(c: Char) =  c <= 'z' & !(c>='0' & c<='9')
