@@ -16,7 +16,7 @@ import scala.collection.mutable.ListBuffer
  * Designed to be loaded into Spark-Shell to analyze wiki_cn data
  */
 
-class WikiOperator{
+class WikiOperator extends java.io.Serializable{
 
 
   def isAsciiLetter(c: Char) =  c <= 'z' & !(c>='0' & c<='9')
