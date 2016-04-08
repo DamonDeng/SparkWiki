@@ -17,6 +17,12 @@ object WikiOperatorRunner {
     val conf = new SparkConf().setAppName("HelloWorld")
     val sc = new SparkContext(conf)
 
+    val wo = new WikiOperator();
+
+    val wordCounts = wo.loadWordPossibilityFromS3SampleFile(sc);
+
+    wordCounts.collect(); 
+
     sc.stop()
   }
 
