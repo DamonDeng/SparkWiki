@@ -141,7 +141,7 @@ class WikiOperator extends java.io.Serializable{
 
 
     while(ts.incrementToken()){
-      // System.out.print(term.toString()+"|")
+      //System.out.print(term.toString()+"|")
       result+=term.toString
     }
     iKAnalyzer.close()
